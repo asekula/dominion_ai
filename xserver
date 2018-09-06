@@ -1,0 +1,4 @@
+scalac -d bin */*.scala
+cd bin
+scala dominion.src.Server
+cd ..

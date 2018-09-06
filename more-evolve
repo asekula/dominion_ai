@@ -1,0 +1,4 @@
+scalac -d bin */*.scala
+cd bin
+scala -J-Xmx2g dominion.src.Population -continue
+cd ..

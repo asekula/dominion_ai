@@ -1,0 +1,32 @@
+Protocol for best.json:
+
+30 entries. 1-indexed.
+
+{
+	"1": {
+		"distribution": {
+			"Copper": 0.03,
+			"Estate": 0.54,
+			...
+		},
+		"matrix": {
+			"Copper": {
+				"Bureaucrat": 0.4,
+				"Militia": 0.7,
+				...
+			}
+		}
+	},
+	"2": {
+		"distribution": {
+			...
+		},
+		"matrix": {
+			...
+		}
+	}
+	...
+	"30": {
+		...
+	}
+}

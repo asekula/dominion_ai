@@ -1,0 +1,78 @@
+
+Requests will be of the form: (using \r\n since the JSON might have \n's in them).
+ 
+DOMINION SUGGESTION\r\n
+key\r\n
+{
+	"id": "enteridhere",
+	"player": {
+		...
+	}
+	[JSON]
+}\r\n
+
+OR
+DOMINION MENUOPTIONS\r\n
+key\r\n
+
+OR
+DOMINION SUPPLYOPTIONS\r\n
+key\r\n
+
+OR
+DOMINION DISCLAIMER\r\n
+key\r\n
+
+************************************************************************
+
+Responses will be JSONs.
+
+SUGGESTION:
+{
+	"actions": [
+		"action1",
+		"action2",
+		...
+	],
+	"player": {
+		...
+	}
+}
+
+MENUOPTIONS:
+{
+	"id": "text",
+	"id2": "text2",
+	...
+}
+
+SUPPLYOPTIONS:
+{
+	"supported": [
+		"Copper",
+		"Silver",
+		...
+	]
+}
+
+DISCLAIMER:
+{
+	"disclaimer": "Text of disclaimer."
+}
+
+************************************************************************
+
+The uses of each option:
+
+SUGGESTION is used to perform decisions on the player based on the input id,
+and returns the resulting player.
+
+MENUOPTIONS is used to show what supported options the player has (i.e. playing a round, 
+adding cards to the supply, or getting attacked by an opponent). Each option has
+actions associated with it.
+
+SUPPLYOPTIONS simply returns which cards are supported by the AI.
+
+DISCLAIMER returns the text of the disclaimer, listing which cards are *not* supported, and other weaknesses of the AI.
+
+
